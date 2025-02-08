@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Sound on Click</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: flex-start; /* Align to the top */
+            align-items: center; /* Align content to the center */
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Button Styling */
+        #playButton {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px; /* Space between the "Play Pop Sound" button and sound buttons */
+        }
+
+        #playButton:hover {
+            background-color: #e1558d;
+            transform: scale(1.1);
+        }
+
+        #playButton:active {
+            transform: scale(1);
+            background-color: #292326;
+        }
+
+        /* 3x3 Grid for Sound Buttons */
+        .sound-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        .sound-button {
+            padding: 15px;
+            font-size: 1rem;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sound-button:hover {
+            background-color: #f50057;
+            transform: scale(1.1);
+        }
+
+        .sound-button:active {
+            transform: scale(1);
+            background-color: #c51162;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click the Button to Hear Sound</h1>
+    <button id="playButton">Sound</button>
+
+    <div class="sound-grid">
+        <button class="sound-button" id="sound1">Dog Barking</button>
+        <button class="sound-button" id="sound2">Cartoon</button>
+        <button class="sound-button" id="sound3">Clock Beep</button>
+        <button class="sound-button" id="sound4">Sadddd</button>
+        <button class="sound-button" id="sound5">Sound 5</button>
+        <button class="sound-button" id="sound6">Sound 6</button>
+        <button class="sound-button" id="sound7">Sound 7</button>
+        <button class="sound-button" id="sound8">Sound 8</button>
+        <button class="sound-button" id="sound9">Sound 9</button>
+    </div>
+
+ -->
+    <audio id="popSound" preload="auto">
+        <source src="snd/pop.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="sound1Audio" preload="auto">
+        <source src="snd/sound1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="sound2Audio" preload="auto">
+        <source src="snd/sound2.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="sound3Audio" preload="auto">
+        <source src="snd/sound3.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="sound4Audio" preload="auto">
+        <source src="snd/sound4.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="sound5Audio" preload="auto">
+        <source src="sound5.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="sound6Audio" preload="auto">
+        <source src="sound6.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="sound7Audio" preload="auto">
+        <source src="sound7.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="sound8Audio" preload="auto">
+        <source src="sound8.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="sound9Audio" preload="auto">
+        <source src="sound9.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const button = document.getElementById('playButton');
+        const popSound = document.getElementById('popSound');
+        button.addEventListener('click', () => {
+            popSound.play(); 
+        });
+        document.getElementById('sound1').addEventListener('click', () => {
+            document.getElementById('sound1Audio').play();
+        });
+        document.getElementById('sound2').addEventListener('click', () => {
+            document.getElementById('sound2Audio').play();
+        });
+        document.getElementById('sound3').addEventListener('click', () => {
+            document.getElementById('sound3Audio').play();
+        });
+        document.getElementById('sound4').addEventListener('click', () => {
+            document.getElementById('sound4Audio').play();
+        });
+        document.getElementById('sound5').addEventListener('click', () => {
+            document.getElementById('sound5Audio').play();
+        });
+        document.getElementById('sound6').addEventListener('click', () => {
+            document.getElementById('sound6Audio').play();
+        });
+        document.getElementById('sound7').addEventListener('click', () => {
+            document.getElementById('sound7Audio').play();
+        });
+        document.getElementById('sound8').addEventListener('click', () => {
+            document.getElementById('sound8Audio').play();
+        });
+        document.getElementById('sound9').addEventListener('click', () => {
+            document.getElementById('sound9Audio').play();
+        });
+    </script>
+</body>
+</html>
